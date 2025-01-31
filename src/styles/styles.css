@@ -45,3 +45,13 @@
         align-items: center;
         gap: 3.5rem;
 }
+.countdownFooter__icon {
+    filter: unset;
+    transition: filter 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    .countdownFooter__link:hover .countdownFooter__icon {
+        filter: brightness(0) saturate(100%) invert(32%) sepia(79%) saturate(1601%) hue-rotate(315deg) brightness(102%) contrast(90%);
+    }
+}

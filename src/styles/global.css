@@ -8,8 +8,8 @@
     font-size: 62.5%;
     list-style: none;
     text-decoration: none;
-    /* font-family: var(--font-family-inter);  */
-    /* color: var(--color-white); */
+    font-family: var(--font-family-redhat); 
+    color: var(--color-white);
     max-width: 100%;
 }
   
@@ -32,7 +32,7 @@ body {
     width: 100vw;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    /* background-color: var(--color-gray900); */
+    background-color: var(--color-black);
 }
 
 a:not([class]) {
@@ -57,7 +57,7 @@ html:focus-within {
 }
 
 :root {
-    --font-family-inter: 'Red Hat Text', sans-serif;
+    --font-family-redhat: 'Red Hat Text', sans-serif;
 
     --font-weight-normal: 400;
     --font-weight-medium: 600;

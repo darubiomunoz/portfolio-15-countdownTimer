@@ -1,0 +1,36 @@
+.countdownPage {
+  height: 100vh;
+  display: flex;
+    flex-direction: column;
+  background-image:
+    url(../assets/images/pattern-hills.svg),
+    url(../assets/images/bg-stars.svg);
+    background-repeat: 
+        no-repeat,
+        no-repeat;
+    background-size: 
+        auto 20rem,
+        cover;
+    background-position:
+        bottom,
+        center;
+    background-position-x: 
+        -89rem,
+        center;
+    background-attachment:
+        fixed,
+        fixed;
+}
+
+.countdownTimer {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.countdownFooter {
+    width: 100vw;
+    height: 20vh;
+}

@@ -1,0 +1,84 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    list-style: none;
+    text-decoration: none;
+    /* font-family: var(--font-family-inter);  */
+    /* color: var(--color-white); */
+    max-width: 100%;
+}
+  
+body, button, input, textarea, select {
+    font: inherit;
+}
+
+img, picture, svg, video, canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul[role='list'], ol[role='list'] {
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    /* background-color: var(--color-gray900); */
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+    
+    *, *::before, *::after {
+      animation-duration: 0.01ms;
+      animation-iteration-count: 1;
+      transition-duration: 0.01ms;
+      scroll-behavior: auto;
+    }
+}
+
+:root {
+    --font-family-inter: 'Red Hat Text', sans-serif;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700;
+
+    --font-size-small: 1.1rem;
+    --font-size-base: 1.4rem;
+    --font-size-title: 2.4rem;
+
+    --layout-mobile: 37.5rem;
+    --layout-desktop-small: 102.4rem;
+    --layout-desktop: 144rem;
+
+    --color-grayish-blue: hsl(237, 18%, 59%);
+    --color-soft-red: hsl(345, 95%, 68%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-dark-desaturated: hsl(236, 21%, 26%);
+    --color-dark-blue: hsl(235, 16%, 14%);
+    --color-black: hsl(234, 17%, 12%);
+
+    --border-radius: 2rem;
+
+    --margin-base: 3rem;
+}

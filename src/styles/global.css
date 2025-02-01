@@ -63,9 +63,10 @@ html:focus-within {
     --font-weight-medium: 600;
     --font-weight-bold: 700;
 
-    --font-size-small: 1.1rem;
+    --font-size-small: .8rem;
     --font-size-base: 1.4rem;
-    --font-size-title: 2.4rem;
+    --font-size-title: 1.7rem;
+    --font-size-number: 3rem;
 
     --layout-mobile: 37.5rem;
     --layout-desktop-small: 102.4rem;

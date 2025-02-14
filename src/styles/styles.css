@@ -1,5 +1,5 @@
 .countdownPage {
-  height: 100vh;
+  max-height: 100vh;
   display: flex;
     flex-direction: column;
   background-image:
@@ -124,11 +124,11 @@
 }
 .in {
     transform: rotateX(0deg);
-    transition: transform .25s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 .out {
     transform: rotateX(-180deg);
-    transition: transform .5s ease-in-out;
+    transition: transform .6s ease-in-out;
 }
 .countdownTimer__subtitle {
     margin-top: auto;

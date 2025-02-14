@@ -32,10 +32,12 @@ function updateCountdown() {
 }
 
 function animateFlipCard(element, value) {
+  const formattedValue = value < 10 ? `0${value.toString()}` : value.toString();
+
   const currentValue = element.textContent.trim();
 
   if (
-    currentValue === value.toString() ||
+    currentValue === formattedValue ||
     element.parentNode.classList.contains("animating")
   ) {
     return;
@@ -49,8 +51,6 @@ function animateFlipCard(element, value) {
       return;
     }
 
-    const formattedValue = value < 10 ? `0${value}` : value;
-
     nextElement.textContent = formattedValue;
 
     element.parentNode.classList.add("out", "animating");
@@ -60,11 +60,11 @@ function animateFlipCard(element, value) {
       element.parentNode.classList.remove("out");
       element.parentNode.classList.add("in");
       
-    }, 250);
+    }, 300);
 
     setTimeout(() => {
       element.parentNode.classList.remove("in", "animating");
-    }, 500);
+    }, 600);
   }
 }
 

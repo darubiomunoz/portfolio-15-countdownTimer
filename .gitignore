@@ -1,54 +1,41 @@
-# Operating System Files
 .DS_Store
 Thumbs.db
 
-# Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Dependency directories
 node_modules/
 vendor/
 
-# Build directories
 dist/
 build/
 out/
 
-# IDEs and Editors
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Temporary Files
 *.tmp
 *.temp
 
-# Environment Variables
 .env
 .env.local
 .env.*.local
 
-# Python Specific
 __pycache__/
 *.py[cod]
 *.pyo
 
-# Java Specific
 *.class
 
-# Ruby Specific
 *.gem
 
-# Go Specific
 *.exe
 
-# Backup Files
 *.bak
 *.old
 
-# Miscellaneous
 !.gitignore  # Ensure .gitignore itself is not ignored

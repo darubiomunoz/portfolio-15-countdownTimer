@@ -32,7 +32,7 @@ body {
     width: 100vw;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--color-black);
+    background-color: var(--color-dark-blue);
 }
 
 a:not([class]) {
@@ -68,6 +68,8 @@ html:focus-within {
     --font-size-title: 1.7rem;
     --font-size-number: 3rem;
 
+    --line-height-large: 6.8rem;
+
     --layout-mobile: 37.5rem;
     --layout-desktop-small: 102.4rem;
     --layout-desktop: 144rem;
@@ -79,7 +81,8 @@ html:focus-within {
     --color-dark-blue: hsl(235, 16%, 14%);
     --color-black: hsl(234, 17%, 12%);
 
-    --border-radius: 2rem;
+    --border-radius-flipcard: .5rem;
+    --inner-border-radius-flipcard: -0.5rem;
 
     --margin-base: 3rem;
 }

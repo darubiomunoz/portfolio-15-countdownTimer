@@ -1,3 +1,5 @@
+const targetDate = getRandomDateWithinThreeMonths();
+
 function getRandomDateWithinThreeMonths() {
     const today = new Date();
     const threeMonthsFromNow = new Date();

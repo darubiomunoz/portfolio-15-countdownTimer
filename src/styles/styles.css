@@ -198,6 +198,13 @@
 }
 
 @media (min-width: 450px) {
+    .countdownPage {
+          background-size: 
+              100% 20%,
+              cover;
+          background-position-x: 
+              center;
+    }
     .countdownFooter__link:hover .countdownFooter__icon {
         filter: brightness(0) saturate(100%) invert(32%) sepia(79%) saturate(1601%) hue-rotate(315deg) brightness(102%) contrast(90%);
     }

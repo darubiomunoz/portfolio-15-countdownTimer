@@ -1,38 +1,71 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const targetDate = getRandomDateWithinThreeMonths();
+const targetDate = getRandomDateWithinOneMonth();
+
+function getRandomDateWithinOneMonth() {
+  const today = new Date();
+  const oneMonthsFromNow = new Date();
+
+  oneMonthsFromNow.setMonth(today.getMonth() + 1);
+
+  const randomTimestamp = today.getTime() + (Math.random() * (oneMonthsFromNow.getTime() - today.getTime()));
     
-    const interval = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-        
-        const days = addLeadingZero(Math.floor(distance / (1000 * 60 * 60 * 24)));
-        const hours = addLeadingZero(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-        const minutes = addLeadingZero(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-        const seconds = addLeadingZero(Math.floor((distance % (1000 * 60)) / 1000));
-      
-        document.getElementById("days").textContent = days;
-        document.getElementById("hours").textContent = hours;
-        document.getElementById("minutes").textContent = minutes;
-        document.getElementById("seconds").textContent = seconds;
-      
-        if (distance <= 0) {
-          clearInterval(interval);
-          document.getElementById("title").innerHTML = "WE HAVE LAUNCHED THE SITE!";
-        }
-      }, 1000);
-});
-
-function getRandomDateWithinThreeMonths() {
-    const today = new Date();
-    const threeMonthsFromNow = new Date();
-
-    threeMonthsFromNow.setMonth(today.getMonth() + 3);
-
-    const randomTimestamp = today.getTime() + (Math.random() * (threeMonthsFromNow.getTime() - today.getTime()));
-    
-    return new Date(randomTimestamp);
+  return new Date(randomTimestamp);
 }
 
-function addLeadingZero(value) {
-    return value < 10 ? `0${value}` : value;
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  animateFlipCard(document.getElementById("days"), days);
+  animateFlipCard(document.getElementById("hours"), hours);
+  animateFlipCard(document.getElementById("minutes"), minutes);
+  animateFlipCard(document.getElementById("seconds"), seconds);
+
+  if (distance <= 0) {
+    clearInterval(interval);
+    document.querySelector(".countdownTimer").innerHTML = "WE HAVE LAUNCHED THE SITE!";
+  }
 }
+
+function animateFlipCard(element, value) {
+  const currentValue = element.textContent.trim();
+
+  if (
+    currentValue === value.toString() ||
+    element.parentNode.classList.contains("animating")
+  ) {
+    return;
+  }
+  
+  if (currentValue !== value.toString()) {
+    const nextElement = element.nextElementSibling;
+
+    if (!nextElement) {
+      console.error("Next element not found for:", element);
+      return;
+    }
+
+    const formattedValue = value < 10 ? `0${value}` : value;
+
+    nextElement.textContent = formattedValue;
+
+    element.parentNode.classList.add("out", "animating");
+
+    setTimeout(() => {
+      element.textContent = nextElement.textContent;
+      element.parentNode.classList.remove("out");
+      element.parentNode.classList.add("in");
+      
+    }, 250);
+
+    setTimeout(() => {
+      element.parentNode.classList.remove("in", "animating");
+    }, 500);
+  }
+}
+
+const interval = setInterval(updateCountdown, 1000);

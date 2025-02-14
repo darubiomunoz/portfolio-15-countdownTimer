@@ -1,0 +1,204 @@
+.countdownPage {
+  height: 100vh;
+  display: flex;
+    flex-direction: column;
+  background-image:
+    url(../assets/images/pattern-hills.svg),
+    url(../assets/images/bg-stars.svg);
+    background-repeat: 
+        no-repeat,
+        no-repeat;
+    background-size: 
+        auto 20rem,
+        cover;
+    background-position:
+        bottom,
+        center;
+    background-position-x: 
+        -89rem,
+        center;
+    background-attachment:
+        fixed,
+        fixed;
+}
+.countdownTimer {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+.countdownTimer__title {
+    width: 75%;
+    text-align: center;
+    letter-spacing: .75rem;
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--margin-base);
+    color: var(--color-white);
+}
+.countdownTimer__wrapper {
+    width: 90%;
+    height: auto;
+    display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+}
+.countdownTimer__block {
+    width: 7rem;
+    height: 9rem;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+}
+.countdownTimer__flipcard {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* perspective: 100rem; FOR THE ANIMATION LATER*/
+    box-shadow: 0 1rem .5rem -.5rem var(--color-black);
+}
+.countdownTimer__flipcard--top,
+.countdownTimer__flipcard--bottom {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    text-align: center;
+    line-height: var(--line-height-large);
+    font-size: var(--font-size-number);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-soft-red);
+}
+.countdownTimer__flipcard--top {
+    top: 0;
+    z-index: 2;
+    border-top-left-radius: var(--border-radius-flipcard);
+    border-top-right-radius: var(--border-radius-flipcard);
+    background: 
+        radial-gradient(circle at bottom left, transparent .5rem, #343650 .5rem),
+        radial-gradient(circle at bottom right, transparent .5rem, #343650 .5rem);
+    background-repeat: no-repeat;
+    background-position: bottom left, bottom right;
+    background-size: 4rem 4rem;
+}
+.countdownTimer__flipcard--top::before {
+    width: 100%;
+    height: 100%;
+    content:  "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top-left-radius: var(--border-radius-flipcard);
+    border-top-right-radius: var(--border-radius-flipcard);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.countdownTimer__flipcard--bottom {
+    bottom: 0;
+    z-index: 1;
+    content-visibility: hidden;
+    border-bottom-left-radius: var(--border-radius-flipcard);
+    border-bottom-right-radius: var(--border-radius-flipcard);
+    background: 
+        radial-gradient(circle at top left, transparent .5rem, #343650 .5rem),
+        radial-gradient(circle at top right, transparent .5rem, #343650 .5rem);
+    background-repeat: no-repeat;
+    background-position: top left, top right;
+    background-size: 4rem 4rem;
+}
+/* .countdownTimer__flipcard--animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+} */
+.countdownTimer__flipcard--front,
+.countdownTimer__flipcard--back {
+    visibility: hidden;
+    /* width: 100%;
+    height: 50%;
+    position: absolute;
+    backface-visibility: hidden;
+    visibility: hidden;
+    text-align: center;
+    line-height: var(--line-height-large);
+    font-size: var(--font-size-number);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-soft-red);
+    background-color: var(--color-dark-desaturated); */
+}
+/* .countdownTimer__flipcard--front {
+    transform-origin: bottom;
+}
+.countdownTimer__flipcard--back {
+    transform-origin: top;
+}
+.countdownTimer__flipcard--front {
+    animation: flipFront .6s forwards;
+}
+.countdownTimer__flipcard--back {
+    animation: flipBack .6s forwards;
+} */
+/* @keyframes flipFront {
+    from {
+        transform: rotateX(0deg);
+        z-index: 2;
+        border-bottom-color: var(--color-black);
+        background-color: var(--color-grayish-blue);
+        color: var(--color-white);
+    }
+    to {
+        transform: rotateX(-90deg);
+        z-index: -1;
+        border-bottom-color: var(--color-soft-red);
+    }
+}
+@keyframes flipBack {
+    from {
+      transform: rotateX(90deg);
+      z-index: -1;
+      background-color: var(--color-grayish-blue);
+      color: var(--color-white);
+    }
+    to {
+      transform: rotateX(0deg);
+      z-index: 2;
+    }
+  } */
+.countdownTimer__subtitle {
+    margin-top: auto;
+    letter-spacing: .3rem;
+    font-size: var(--font-size-small);
+    color: var(--color-grayish-blue);
+}
+.countdownFooter {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+}
+.countdownFooter__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3.5rem;
+}
+.countdownFooter__icon {
+    width: 2rem;
+    height: 2rem;
+    filter: unset;
+    transition: filter 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    .countdownFooter__link:hover .countdownFooter__icon {
+        filter: brightness(0) saturate(100%) invert(32%) sepia(79%) saturate(1601%) hue-rotate(315deg) brightness(102%) contrast(90%);
+    }
+}

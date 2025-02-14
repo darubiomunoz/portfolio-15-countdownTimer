@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="theme-color" content=""> <!-- Add color -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A sleek and responsive launch countdown timer to track the time until our big event!">
+        <meta name="description" content="A sleek and responsive launch countdown timer to track the time until our big event!"> 
         <meta name="keywords" content="Countdown Timer, Launch Timer, Event Timer, JavaScript Project">
         <meta name="author" content="Diego Rubio | darubiomnoz@gmail.com">
         <meta property="og:title" content="Launch Countdown Timer">
@@ -18,48 +18,68 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./src/styles/"> <!-- Add CSS GLOBAL -->
-        <link rel="stylesheet" type="text/css" href="./src/styles/"> <!-- Add Styles -->
-    <body>
-        <main>
-            <h1>WE'RE LAUNCHING SOON</h1>
-            <section>
-                <section>
-                    <div>
-                        <h2>25</h2>
+        <link rel="stylesheet" type="text/css" href="./src/styles/global.css">
+        <link rel="stylesheet" type="text/css" href="./src/styles/styles.css">
+    <body class="countdownPage">
+        <main class="countdownTimer">
+            <h1 class="countdownTimer__title">WE'RE LAUNCHING SOON</h1>
+            <section class="countdownTimer__wrapper">
+                <section class="countdownTimer__block">
+                    <div class="countdownTimer__flipcard">
+                        <div class="countdownTimer__flipcard--top">09</div>
+                        <div class="countdownTimer__flipcard--bottom">08</div>
+                        <div class="countdownTimer__flipcard--animation">
+                          <span class="countdownTimer__flipcard--front">09</span>
+                          <span class="countdownTimer__flipcard--back">08</span>
+                        </div>
                     </div>
-                    <p>DAYS</p>
+                    <h2 class="countdownTimer__subtitle">DAYS</h2>
                 </section>
-                <section>
-                    <div>
-                        <h2>15</h2>
+                <section class="countdownTimer__block">
+                    <div class="countdownTimer__flipcard">
+                        <div class="countdownTimer__flipcard--top">23</div>
+                        <div class="countdownTimer__flipcard--bottom">22</div>
+                        <div class="countdownTimer__flipcard--animation">
+                          <span class="countdownTimer__flipcard--front">23</span>
+                          <span class="countdownTimer__flipcard--back">22</span>
+                        </div>
                     </div>
-                    <p>HOURS</p>
+                    <h2 class="countdownTimer__subtitle">HOURS</h2>
                 </section>
-                <section>
-                    <div>
-                        <h2>2</h2>
+                <section class="countdownTimer__block">
+                    <div class="countdownTimer__flipcard">
+                        <div class="countdownTimer__flipcard--top">33</div>
+                        <div class="countdownTimer__flipcard--bottom">32</div>
+                        <div class="countdownTimer__flipcard--animation">
+                          <span class="countdownTimer__flipcard--front">33</span>
+                          <span class="countdownTimer__flipcard--back">32</span>
+                        </div>
                     </div>
-                    <p>MINUTES</p>
+                    <h2 class="countdownTimer__subtitle">MINUTES</h2>
                 </section>
-                <section>
-                    <div>
-                        <h2>25</h2>
+                <section class="countdownTimer__block">
+                    <div class="countdownTimer__flipcard">
+                        <div class="countdownTimer__flipcard--top">11</div>
+                        <div class="countdownTimer__flipcard--bottom">10</div>
+                        <div class="countdownTimer__flipcard--animation">
+                          <span class="countdownTimer__flipcard--front">11</span>
+                          <span class="countdownTimer__flipcard--back">10</span>
+                        </div>
                     </div>
-                    <p>SECONDS</p>
+                    <h2 class="countdownTimer__subtitle">SECONDS</h2>
                 </section>
             </section>
         </main>
-        <footer>
-            <div class="">
-                <a href="https://www.facebook.com" target="_blank" title="Facebook">
-                  <i class=""></i>
+        <footer class="countdownFooter">
+            <div class="countdownFooter__wrapper">
+                <a class="countdownFooter__link" href="https://darubiomunoz.github.io/" target="_blank" title="Facebook">
+                  <img class="countdownFooter__icon" src="./src/assets/images/icon-facebook.svg"></img>
                 </a>
-                <a href="https://www.pinterest.com" target="_blank" title="Pinterest">
-                  <i class=""></i>
+                <a class="countdownFooter__link" href="https://darubiomunoz.github.io/" target="_blank" title="Pinterest">
+                  <img class="countdownFooter__icon" src="./src/assets/images/icon-pinterest.svg"></img>
                 </a>
-                <a href="https://www.instagram.com" target="_blank" title="Instagram">
-                  <i class=""></i>
+                <a class="countdownFooter__link" href="https://darubiomunoz.github.io/" target="_blank" title="Instagram">
+                  <img class="countdownFooter__icon" src="./src/assets/images/icon-instagram.svg"></img>
                 </a>
               </div>
         </footer>

@@ -11,6 +11,7 @@
     font-family: var(--font-family-redhat); 
     color: var(--color-white);
     max-width: 100%;
+    max-height: 100vh;
 }
   
 body, button, input, textarea, select {

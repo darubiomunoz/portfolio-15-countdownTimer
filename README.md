@@ -24,7 +24,7 @@
     <br />
     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><strong>Explore the CSS's docs »</strong></a>
     <br />
-    <a href="(https://developer.mozilla.org/en-US/docs/Web/JavaScript"><strong>Explore the Javascript's docs »</strong></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><strong>Explore the Javascript's docs »</strong></a>
     <br />
     <br />
   </p>
